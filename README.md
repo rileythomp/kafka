@@ -34,8 +34,8 @@ $ bin/zookeeper-server-start.sh config/zookeeper.properties
 We'll use 3 Kafka brokers for this example. To do so, put the `config/server.{1-3}.properties` files from this repo in the Kafka `config` direcotry. These config files specify log file directories that must also be created, so do:
 ```
 $ mkdir /tmp/kafka-logs1
-$ mkdir /tmp/kafka-logs1
-$ mkdir /tmp/kafka-logs1
+$ mkdir /tmp/kafka-logs2
+$ mkdir /tmp/kafka-logs3
 ```
 Now start the Kafka brokers by running the following in separate terminals
 ```
