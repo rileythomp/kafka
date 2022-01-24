@@ -23,7 +23,7 @@ func consume(ctx context.Context, brokers []string, topics []string) {
 	var wg sync.WaitGroup
 
 	for _, topic := range topics {
-		serviceReader := kafka.NewReader(kafka.ReaderConfig{
+		topicReader := kafka.NewReader(kafka.ReaderConfig{
 			Brokers:     brokers,
 			Topic:       topic,
 			GroupID:     "audit-group",
@@ -41,7 +41,7 @@ func consume(ctx context.Context, brokers []string, topics []string) {
 				}
 				fmt.Printf("received message from %s: %s\n", msg.Topic, string(msg.Value))
 			}
-		}(serviceReader)
+		}(topicReader)
 	}
 
 	fmt.Printf("listening for messages from topics: %v\n", topics)
