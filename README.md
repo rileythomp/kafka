@@ -18,6 +18,8 @@ Download the latest stable of version (3.1.0 at time of writing) of Kafka from [
 
 Extract the tar files with `$ tar -xvzf kafka_2.13-3.1.0.tgz`. This will create a `kafka_2.13-3.1.0/` directory which should contain `bin/` and `config/` directories.
 
+---
+
 ### Run Zookeeper
 
 Zookeeper is an Apache service for distributed server coordination. Kafka requies a Zookeeper server to run. To start a Zookeeper server, `$ cd kafka_2.13-3.1.0/` and then run:
