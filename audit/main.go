@@ -9,15 +9,14 @@ import (
 )
 
 var (
-	service1 = "service1"
-	service2 = "service2"
-	brokers  = []string{"localhost:9093", "localhost:9093", "localhost:9095"}
+	topics  = []string{"service1", "service2"}
+	brokers = []string{"localhost:9093", "localhost:9093", "localhost:9095"}
 )
 
 func main() {
 	fmt.Println("starting audit service...")
 	ctx := context.Background()
-	consume(ctx, brokers, []string{service1, service2})
+	consume(ctx, brokers, topics)
 }
 
 func consume(ctx context.Context, brokers []string, topics []string) {
