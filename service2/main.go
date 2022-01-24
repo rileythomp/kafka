@@ -32,7 +32,7 @@ func produce(ctx context.Context) {
 		Topic:   topic,
 	})
 
-	for i := 0; ; i++ {
+	for {
 		event := Event{
 			EntityType: "content",
 			Action:     "created",
